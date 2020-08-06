@@ -50,25 +50,6 @@ File : `config.toml`
           coordY = "7.4938"  # Your real Y coordinate
 ```
 
-### CSS
-
-```css
-  /* iframe des maps */
-  .map-responsive{
-    overflow:hidden;
-    padding-bottom:56.25%;
-    position:relative;
-    height:0;
-  }
-  .map-responsive iframe{
-    left:0;
-    top:0;
-    height:100%;
-    width:100%;
-    position:absolute;
-  }
-```
-
 ### HTML template Usage
 
 ```go-html-template
@@ -79,6 +60,4 @@ File : `config.toml`
 
 ### Credits
 
-- Original idea : https://discourse.gohugo.io/t/responsive-lazy-loaded-images/26041
-- lazyload : https://github.com/verlok/vanilla-lazyload
-- Copyright © 20120 onwards, Didier Georgieff divinerites@gmail.com
+- Copyright © 2020 onwards, Didier Divinerites

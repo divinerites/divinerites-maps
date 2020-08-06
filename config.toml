@@ -1,0 +1,32 @@
+[params]
+   [params.global]
+      [params.global.map]
+         [params.global.map.googlemap]
+            ## For google map
+            map = true
+            title = "Google Map"
+            url = ""  # Your real google URL
+
+         [params.global.map.osm]
+            ## For Open Street Map
+            map = true
+            title = "Open Street Map"
+
+            # Creating  url
+            mapName = ""  # Your map name on http://umap.openstreetmap.fr/
+            scaleControl = "true"
+            miniMap = "false"
+            scrollWheelZoom = "true"
+            zoomControl = "true"
+            allowEdit = "false"
+            moreControl = "true"
+            searchControl = "true"
+            tilelayersControl = "null"
+            embedControl = "false"
+            datalayersControl = "null"
+            onLoadPanel = "none"
+            captionBar = "false"
+            fullscreenControl = "null"
+            scale = "12"
+            coordX = ""  # Your real X coordinate
+            coordY = ""  # Your real Y coordinate

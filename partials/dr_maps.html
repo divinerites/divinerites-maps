@@ -1,0 +1,76 @@
+{{ with site.Params.global.map }}
+
+   <!-- CSS for maps iframes -->
+   <style type=text/css>
+   .map-responsive{
+      overflow:hidden;
+      padding-bottom:56.25%;
+      position:relative;
+      height:0;
+   }
+   .map-responsive iframe{
+      left:0;
+      top:0;
+      height:100%;
+      width:100%;
+      position:absolute;
+   }
+
+   .map-responsive-full{
+      overflow:hidden;
+      padding-bottom:50%;
+      position:relative;
+      height:0;
+   }
+   .map-responsive-full iframe{
+      left:0;
+      top:0;
+      height:65%;
+      width:100%;
+      position:absolute;
+   }
+   </style>
+
+   <!-- Use Google maps -->
+   {{ with .googlemap }}
+      {{ if .map }}
+            {{ with .title }}<h2>{{ . }}</h2>{{ end }}
+            <div class="map-responsive">
+               <iframe
+                  {{ if site.Params.global.lazyload.enable }}
+                        data-src="{{ .url }}"
+                  {{ else }}
+                        src="{{ .url }}"
+                  {{ end }}
+                        width="600" height="450"
+                        frameborder="0" style="border:0"
+                        {{ if site.Params.global.lazyload.enable }}class="{{ site.Params.global.lazyload.label }}"{{ end }}
+                        webkitallowfullscreen mozallowfullscreen allowfullscreen>
+               </iframe>
+            </div>
+      {{ end }}
+   {{ end }}
+
+   <!-- Use Open Street Map -->
+   {{ with .osm }}
+      {{ if .map }}
+            {{ with .title }}<h4>{{ . }}</h4>{{ end }}
+            <div class="map-responsive{{ if site.Params.global.map.full }}-full{{ end }}">
+               {{ $url := partial "osm_conf.html" . }}
+               <iframe
+                  {{ if site.Params.global.lazyload.enable }}
+                        data-src="{{ $url }}"
+                  {{ else }}
+                        src="{{ $url }}"
+                  {{ end }}
+                        width="600" height="450"
+                        frameborder="0" style="border:0"
+                        aria-hidden="false" tabindex="0"
+                        {{ if site.Params.global.lazyload.enable }}class="{{ site.Params.global.lazyload.label }}"{{ end }}
+                        webkitallowfullscreen mozallowfullscreen allowfullscreen>
+               </iframe>
+            </div>
+      {{ end}}
+   {{ end }}
+
+{{ end }}

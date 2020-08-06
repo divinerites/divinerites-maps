@@ -1,0 +1,17 @@
+# theme.yaml configuration file
+
+name: divinerites-maps
+license: GPLv3
+licenselink: https://www.gnu.org/licenses/gpl-3.0.html
+description: Manage easily google & opens street maps
+homepage: https://github.com/divinerites/divinerites-maps
+version: 1.0.0
+tags:
+  - maps
+  - google maps
+  - open street map
+features:
+  - Manage easily google & opens treet maps
+min_version: 0.50.0
+author:
+  name: Didier Divinerites

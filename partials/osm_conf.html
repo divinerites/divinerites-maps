@@ -1,0 +1,4 @@
+{{ $osm_url := "" }}
+{{ $url := printf "https://umap.openstreetmap.fr/fr/map/%s?scaleControl=%s&miniMap=%s&scrollWheelZoom=%s&zoomControl=%s&allowEdit=%s&moreControl=%s&searchControl=%s&tilelayersControl=%s&embedControl=%s&datalayersControl=%s&onLoadPanel=%s&captionBar=%s&fullscreenControl=%s#%s/%s/%s"  .mapName .scaleControl .miniMap .scrollWheelZoom .zoomControl .allowEdit .moreControl .searchControl .tilelayersControl .embedControl  .datalayersControl .onLoadPanel .captionBar .fullscreenControl .scale .coordX .coordY }}
+{{ $osm_url = $url | safeURL }}
+{{ return $osm_url }}

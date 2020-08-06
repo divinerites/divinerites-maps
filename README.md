@@ -71,7 +71,6 @@ File : `config.toml`
 
 ### HTML template Usage
 
-
 ```go-html-template
 <div>
 {{ partial "dr_maps.html" . }}

@@ -52,10 +52,10 @@ File : `config.toml`
 
 ### HTML template Usage
 
+Do not put `<div>` because it is not compliant with inline `<style>`
+
 ```go-html-template
-<div>
 {{ partial "dr_maps.html" . }}
-<div>
 ```
 
 ### Credits

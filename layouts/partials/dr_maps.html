@@ -1,5 +1,4 @@
 {{ with site.Params.global.map }}
-
    <!-- CSS for maps iframes -->
    <style type=text/css>
    .map-responsive{
@@ -15,7 +14,6 @@
       width:100%;
       position:absolute;
    }
-
    .map-responsive-full{
       overflow:hidden;
       padding-bottom:50%;
@@ -34,6 +32,8 @@
    <!-- Use Google maps -->
    {{ with .googlemap }}
       {{ if .map }}
+      <div class="row">
+         <div class="col-12">
             {{ with .title }}<h2>{{ . }}</h2>{{ end }}
             <div class="map-responsive">
                <iframe
@@ -48,12 +48,16 @@
                         webkitallowfullscreen mozallowfullscreen allowfullscreen>
                </iframe>
             </div>
+         </div>
+      </div>
       {{ end }}
    {{ end }}
 
    <!-- Use Open Street Map -->
    {{ with .osm }}
       {{ if .map }}
+      <div class="row">
+         <div class="col-12">
             {{ with .title }}<h4>{{ . }}</h4>{{ end }}
             <div class="map-responsive{{ if site.Params.global.map.full }}-full{{ end }}">
                {{ $url := partial "osm_conf.html" . }}
@@ -70,6 +74,8 @@
                         webkitallowfullscreen mozallowfullscreen allowfullscreen>
                </iframe>
             </div>
+         </div>
+      </div>
       {{ end}}
    {{ end }}
 

@@ -42,6 +42,7 @@
                   {{ else }}
                         src="{{ .url }}"
                   {{ end }}
+                        title="Google Map"
                         width="600" height="450"
                         frameborder="0" style="border:0"
                         {{ if site.Params.global.lazyload.enable }}class="{{ site.Params.global.lazyload.label }}"{{ end }}
@@ -70,6 +71,7 @@
                   {{ else }}
                         src="{{ $url }}"
                   {{ end }}
+                        title="Openstreet Map"
                         width="600" height="450"
                         frameborder="0" style="border:0"
                         aria-hidden="false" tabindex="0"

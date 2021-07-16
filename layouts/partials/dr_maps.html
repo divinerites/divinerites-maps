@@ -73,7 +73,8 @@
                         frameborder="0" style="border:0"
                         aria-hidden="false" tabindex="0"
                         {{ if site.Params.global.lazyload.enable }}class="{{ site.Params.global.lazyload.label }}"{{ end }}
-                        webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                        webkitallowfullscreen mozallowfullscreen allowfullscreen
+                        sandbox='allow-scripts allow-same-origin'>
                </iframe>
             </div>
          </div>
